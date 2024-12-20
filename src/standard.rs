@@ -197,7 +197,7 @@ impl StandardMerkleTree {
 
         // rebuild tree index and generate proof
         let value = self.values.get(value_index).unwrap();
-        let proof = get_proof(self.tree.clone(), value.tree_index)?;
+        let proof = get_proof(&self.tree, value.tree_index)?;
 
         // check proof
         let hash = self.tree.get(value.tree_index).unwrap();
