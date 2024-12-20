@@ -116,7 +116,7 @@ pub fn make_merkle_tree(leaves: Vec<Bytes>) -> Result<Vec<Bytes>> {
     Ok(tree)
 }
 
-pub fn get_proof(tree: Vec<Bytes>, mut i: usize) -> Result<Vec<Bytes>> {
+pub fn get_proof(tree: &[Bytes], mut i: usize) -> Result<Vec<Bytes>> {
     check_leaf_node(&tree, i)?;
 
     let mut proof = Vec::new();
