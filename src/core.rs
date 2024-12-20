@@ -389,7 +389,7 @@ mod tests {
     fn test_get_proof() {
         let expected_tree = make_tree();
 
-        let proof = get_proof(expected_tree, 6).unwrap();
+        let proof = get_proof(&expected_tree, 6).unwrap();
         let expected_proof = vec![
             Bytes::from([
                 233, 88, 165, 147, 77, 183, 162, 199, 170, 207, 58, 67, 225, 101, 161, 93, 18, 143,
